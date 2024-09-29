@@ -1,0 +1,1 @@
+tac datasets/ImageNet/train/classes.txt | sed -n -e '/'$1'/,$p' | tac | sed -n '/'$1'/!p' | tail -n +2 | wc -l
