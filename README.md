@@ -18,7 +18,7 @@ conda activate RIG
 
 conda install pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvidia
 
-pip install time pyyaml scipy gdown
+pip install timm pyyaml scipy gdown
 ```
 
 ## Pip
