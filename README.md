@@ -10,10 +10,19 @@ This repository contains the code for the paper "Characterizing Robustness via N
 [[Paper](https://arxiv.org/abs/XXXX.XX)]
 
 # Requirements
-Install the conda environment as follows:
+## Conda
+Set up the conda environment as follows:
 ```
-conda env create --file=env.yml
+conda create -n RIG python=3.9 -y
+conda activate RIG
+
+conda install pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvidia
+
+pip install time pyyaml scipy gdown
 ```
+
+## Pip
+ToDo
 
 # Download models
 For the models referenced in the paper, they can be downloaded from the following links
