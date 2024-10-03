@@ -18,13 +18,13 @@ conda activate RIG
 
 conda install pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvidia
 
-pip install timm pyyaml scipy gdown pandas
+pip install timm==1.0.9 pyyaml==6.0.2 scipy==1.13.1 gdown==5.2.0 pandas==2.2.3
 ```
 
 ## Pip
 If using pip, simply install
 ```
-pip install timm pyyaml scipy gdown pandas
+pip install timm==1.0.9 pyyaml==6.0.2 scipy==1.13.1 gdown==5.2.0 pandas==2.2.3
 ```
 
 # Download models
