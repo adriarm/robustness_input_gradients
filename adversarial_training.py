@@ -51,6 +51,8 @@ from timm.utils.model import get_state_dict, unwrap_model
 import numpy as np
 np.set_printoptions(threshold=np.inf)
 
+import swin_transformer_timm_version
+
 # torch.autograd.set_detect_anomaly(True)
 
 
@@ -421,26 +423,26 @@ def main(args, args_text):
         reg_loss_fn = None
     elif args.gradnorm and args.loss_fn == 'DBP':
         reg_loss_fn = input_norm_losses.DBP()
-    elif args.gradnorm and args.loss_fn == 'DBPAMHM':
-        reg_loss_fn = input_norm_losses.DBPAMHM()
-    elif args.gradnorm and args.loss_fn == 'DBPSparsity':
-        reg_loss_fn = input_norm_losses.DBPSparsity()
-    elif args.gradnorm and args.loss_fn == 'DBPChannel':
-        reg_loss_fn = input_norm_losses.DBPChannel()
-    elif args.gradnorm and args.loss_fn == 'DBPThresholded':
-        reg_loss_fn = input_norm_losses.DBPThresholded()
-    elif args.gradnorm and args.loss_fn == 'DBPPow':
-        reg_loss_fn = input_norm_losses.DBPPow(p=args.p, th=args.th, tol=args.tol)
-    elif args.gradnorm and args.loss_fn == 'DBPTangent':
-        reg_loss_fn = input_norm_losses.DBPTangent().cuda()
-    elif args.gradnorm and args.loss_fn == 'DBPEdgeWeight':
-        reg_loss_fn = input_norm_losses.DBPEdgeWeight().cuda()
-    elif args.gradnorm and args.loss_fn == 'DBPEdgeWeightNorm':
-        reg_loss_fn = input_norm_losses.DBPEdgeWeightNorm().cuda()
-    elif args.gradnorm and args.loss_fn == 'DBPChange':
-        reg_loss_fn = input_norm_losses.DBPChange().cuda()
-    elif args.gradnorm and args.loss_fn == 'EdgePatchSimilarity':
-        reg_loss_fn = patch_similarity_losses.EdgePatchSimilarity(patch_size=args.patch_size).cuda()
+    # elif args.gradnorm and args.loss_fn == 'DBPAMHM':
+    #     reg_loss_fn = input_norm_losses.DBPAMHM()
+    # elif args.gradnorm and args.loss_fn == 'DBPSparsity':
+    #     reg_loss_fn = input_norm_losses.DBPSparsity()
+    # elif args.gradnorm and args.loss_fn == 'DBPChannel':
+    #     reg_loss_fn = input_norm_losses.DBPChannel()
+    # elif args.gradnorm and args.loss_fn == 'DBPThresholded':
+    #     reg_loss_fn = input_norm_losses.DBPThresholded()
+    # elif args.gradnorm and args.loss_fn == 'DBPPow':
+    #     reg_loss_fn = input_norm_losses.DBPPow(p=args.p, th=args.th, tol=args.tol)
+    # elif args.gradnorm and args.loss_fn == 'DBPTangent':
+    #     reg_loss_fn = input_norm_losses.DBPTangent().cuda()
+    # elif args.gradnorm and args.loss_fn == 'DBPEdgeWeight':
+    #     reg_loss_fn = input_norm_losses.DBPEdgeWeight().cuda()
+    # elif args.gradnorm and args.loss_fn == 'DBPEdgeWeightNorm':
+    #     reg_loss_fn = input_norm_losses.DBPEdgeWeightNorm().cuda()
+    # elif args.gradnorm and args.loss_fn == 'DBPChange':
+    #     reg_loss_fn = input_norm_losses.DBPChange().cuda()
+    # elif args.gradnorm and args.loss_fn == 'EdgePatchSimilarity':
+    #     reg_loss_fn = patch_similarity_losses.EdgePatchSimilarity(patch_size=args.patch_size).cuda()
     _logger.info(f'Reg losses: {str(reg_loss_fn)}')
 
     # saver
