@@ -27,6 +27,8 @@ from model import vit_mae
 from model.model_zoo import model_zoo
 from eval_y0_gradients_single_image import ToGreyscale
 
+import swin_transformer_timm_version
+
 def get_model(model_name, ckpt_path=''):
     backbone=model_zoo[model_name]['model']
     url = model_zoo[model_name]['url']
