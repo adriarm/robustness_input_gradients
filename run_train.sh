@@ -18,7 +18,8 @@ echo "# MASTER_PORT="$MASTER_PORT
 # Swin-B
 # torchrun --nproc_per_node=7 --master_port $MASTER_PORT adversarial_training.py --configs=./configs_train/gradnorm_swinb_variant_test.yaml
 # torchrun --nproc_per_node=8 --master_port $MASTER_PORT adversarial_training.py --configs=./configs_train/advtrain_swinb.yaml
-torchrun --nproc_per_node=7 --master_port $MASTER_PORT adversarial_training.py --configs=./configs_train/gradnorm_swinb_variant.yaml
+# torchrun --nproc_per_node=7 --master_port $MASTER_PORT adversarial_training.py --configs=./configs_train/gradnorm_swinb_variant.yaml
+torchrun --nproc_per_node=7 --master_port $MASTER_PORT adversarial_training.py --configs=./configs_train/gradnorm_swinl_variant.yaml
 # torchrun --nproc_per_node=8 --master_port $MASTER_PORT adversarial_training.py --configs=./configs_train/advtrain1_swinb.yaml
 # torchrun --nproc_per_node=8 adversarial_training_logit.py --configs=./configs_logit/logitsobel_swinb_hard05.yaml
 
