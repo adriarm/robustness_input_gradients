@@ -1,0 +1,19 @@
+{
+  "link": null,
+  "name": null,
+  "authors": null,
+  "additional_data": null,
+  "number_forward_passes": null,
+  "dataset": "imagenet",
+  "venue": null,
+  "architecture": "swin_base_patch4_window7_224",
+  "eps": 0.01568627450980392,
+  "clean_acc": "77.76",
+  "reported": null,
+  "corruptions_acc": null,
+  "corruptions_acc_3d": null,
+  "corruptions_mce": null,
+  "corruptions_mce_3d": null,
+  "autoattack_acc": "51.56",
+  "footnote": null
+}

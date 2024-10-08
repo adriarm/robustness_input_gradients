@@ -50,8 +50,8 @@ class NormalizeByChannelMeanStd(nn.Module):
     def extra_repr(self):
         return 'mean={}, std={}'.format(self.mean, self.std)
 
-def get_RodriguezMunoz2024Characterizing_model(ckpt_location):
-  model = create_model('swin_base_patch4_window7_224', pretrained=False, num_classes=1000, act_gelu=True)
+def get_RodriguezMunoz2024Characterizing_model(arch, ckpt_location):
+  model = create_model(arch, pretrained=False, num_classes=1000, act_gelu=True)
   ckpt=torch.load(ckpt_location, map_location='cpu')
   model.load_state_dict(ckpt['state_dict_ema'])
 

@@ -9,10 +9,13 @@ from benchmark_model_utils import get_RodriguezMunoz2024Characterizing_model, ge
 
 # Edit data_dir and ckpt_location to your own values
 data_dir = '/data/vision/torralba/datasets/imagenet_pytorch'
-ckpt_location = '/vision-nfs/torralba/projects/adrianr/input_norm/eccv_outputs/gradnorm_swinb_variant/2024-02-14_11-30-41/last.pth.tar'
+# arch = 'swin_base_patch4_window7_224'
+# ckpt_location = '/vision-nfs/torralba/projects/adrianr/input_norm/eccv_outputs/gradnorm_swinb_variant/2024-02-14_11-30-41/last.pth.tar'
+arch = 'swin_large_patch4_window7_224'
+ckpt_location = '/vision-nfs/torralba/projects/adrianr/robustness_input_gradients/outputs/gradnorm_swinl_variant/2024-10-03_13-09-02/last.pth.tar'
 
 transform = get_data_transform()
-model = get_RodriguezMunoz2024Characterizing_model(ckpt_location)
+model = get_RodriguezMunoz2024Characterizing_model(arch, ckpt_location)
 
 threat_model = "Linf"  # one of {"Linf", "L2", "corruptions"}
 dataset = "imagenet"  # one of {"cifar10", "cifar100", "imagenet"}
