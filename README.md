@@ -7,7 +7,7 @@ This repository contains the code for the paper "Characterizing Robustness via N
 </p>
 
 [[Project page](https://adriarm.github.io/_pages/robustness_input_gradients/)] 
-[[Paper](https://arxiv.org/abs/XXXX.XX)]
+[[Paper](https://arxiv.org/abs/2409.20139)]
 
 # Requirements
 ## Conda
